@@ -1,0 +1,27 @@
+{
+  "name": "statusbar",
+  "version": "1.0.0",
+  "description": "status & process bar for markdown",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanbingbing/statusbar.git"
+  },
+  "keywords": [
+    "status",
+    "process"
+  ],
+  "author": "onbing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanbingbing/statusbar/issues"
+  },
+  "homepage": "https://github.com/yanbingbing/statusbar#readme",
+  "dependencies": {
+    "express": "~4.13.3",
+    "nodemon": "~1.8.1"
+  }
+}
