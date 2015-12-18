@@ -4,6 +4,8 @@ const express = require('express');
 
 const app = express();
 
+const server = require('http').createServer(app);
+
 app.get('/', function (req, res) {
     res.type('image/svg+xml');
     res.send(getsvg(req.query.title || 'hello', req.query.color, req.query.label, req.query.flat));
@@ -86,9 +88,8 @@ function getsvg(title, color, label, flat) {
     return svg.join('');
 }
 
-const server = app.listen(process.env.HTTP_PORT || 3000, function () {
-    let host = server.address().address;
-    let port = server.address().port;
+let port = process.env.HTTP_PORT || 8080;
 
-    console.log('Example app listening at http://%s:%s', host, port);
-});
+server.listen(port);
+
+console.log('Listening on port %s', port);
