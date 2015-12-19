@@ -88,7 +88,7 @@ function getsvg(title, color, label, flat) {
     return svg.join('');
 }
 
-let port = process.env.HTTP_PORT || 8080;
+let port = process.env.HTTP_PORT || 8000;
 
 server.listen(port);
 

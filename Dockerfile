@@ -2,16 +2,16 @@
 #
 # VERSION               1.0.0
 
-FROM node:5
+FROM daocloud.io/node:5
 MAINTAINER me@yanbingbing.com
 
-ENV HTTP_PORT 80
+ENV HTTP_PORT 8000
 
 ADD . /app
 WORKDIR /app
 
 RUN npm --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist install
 
-EXPOSE 80
+EXPOSE 8000
 
 CMD ["npm", "start"]
