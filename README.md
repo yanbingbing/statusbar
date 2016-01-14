@@ -1,5 +1,5 @@
 # statusbar
-status and process bar for mardown
+status and process bar for markdown
 
 
 ```sh
