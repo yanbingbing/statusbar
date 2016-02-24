@@ -8,14 +8,15 @@ const server = require('http').createServer(app);
 
 app.get('/', function (req, res) {
     res.type('image/svg+xml');
-    res.send(getsvg(req.query.title || 'hello', req.query.color, req.query.label, req.query.flat));
+    res.send(getsvg(req.query.title || 'hello', req.query.color, req.query.label, req.query.flat, req.query.labelColor));
     res.end();
 });
 
-function getsvg(title, color, label, flat) {
+function getsvg(title, color, label, flat, labelColor) {
     title = title || '';
     label = label || '';
     color = color || '#555';
+    labelColor = labelColor || '#162e34';
 
     let lM = 0,
         lh = 40,
@@ -62,7 +63,7 @@ function getsvg(title, color, label, flat) {
     svg.push('<g' + (flat ? '' : ' mask="url(#a)"') + '>');
 
     if (label) {
-        svg.push('<path fill="#162e34" d="M0 0h'+lh+'v'+v+'H0z"/>');
+        svg.push('<path fill="' + labelColor + '" d="M0 0h'+lh+'v'+v+'H0z"/>');
     }
 
     svg.push('<path fill="'+color+'" d="M'+M+' 0h'+h+'v'+v+'H'+H+'z"/>');
