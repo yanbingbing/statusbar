@@ -76,14 +76,14 @@ function getsvg(title, titleColor, subject, flat, subjectColor) {
 
     if (subject) {
         if (!flat) {
-            svg.push('<text x="'+(subjectWidth / 2)+'" fill="#010101" fill-opacity=".3" y="14">'+subject+'</text>');
+            svg.push('<text x="'+(subjectWidth / 2)+'" fill="#010101" fill-opacity=".3" y="15">'+subject+'</text>');
         }
         svg.push('<text x="'+(subjectWidth / 2)+'" y="14">'+subject+'</text>');
 
     }
 
     if (!flat) {
-        svg.push('<text x="'+(subjectWidth + (titleWidth / 2))+'" fill="#010101" fill-opacity=".3" y="14">'+title+'</text>');
+        svg.push('<text x="'+(subjectWidth + (titleWidth / 2))+'" fill="#010101" fill-opacity=".3" y="15">'+title+'</text>');
     }
     svg.push('<text x="'+(subjectWidth + (titleWidth / 2))+'" y="14">'+title+'</text>');
 
